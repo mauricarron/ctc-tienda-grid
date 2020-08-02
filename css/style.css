@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+
+:root {
+  --fuentePrincipal: "Staatliches", cursive;
+  --primario: #9c27b0;
+  --primarioOscuro: #89119d;
+  --secundario: #ffce00;
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%; /* 1rem = 10px */
@@ -10,19 +19,18 @@ html {
 }
 
 body {
-  font-size: 1.6rem;
+  font-size: 2rem;
   line-height: 2;
+  background-color: var(--primario);
 }
 
 /* GLOBALES */
-h1,
-h2,
-h3,
-h4 {
-}
-
 h1 {
+  font-family: var(--fuentePrincipal);
   font-size: 4.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--secundario);
 }
 
 h2 {
@@ -37,6 +45,12 @@ h4 {
   font-size: 2.8rem;
 }
 
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
 img {
   max-width: 100%;
 }
@@ -49,4 +63,183 @@ img {
 
 .txt-center {
   text-align: center;
+}
+
+/** HEADER **/
+.site-header {
+  display: grid;
+  justify-content: center;
+  padding: 3rem 0rem;
+}
+
+/** NAVBAR **/
+.navbar {
+  background-color: var(--primarioOscuro);
+}
+
+.navbar .nav {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, auto);
+  gap: 3rem;
+}
+
+.navbar .nav a {
+  padding: 1rem 3rem;
+  font-family: var(--fuentePrincipal);
+  font-size: 3rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.navbar .nav a:hover {
+  color: var(--secundario);
+}
+
+/** MAIN SITE - STORE ITEMS **/
+.list-products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .list-products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.product {
+  padding: 1rem;
+  background-color: var(--primarioOscuro);
+  text-align: center;
+}
+
+.product p {
+  margin: 0rem;
+  font-family: var(--fuentePrincipal);
+  text-align: center;
+  line-height: 1.5;
+}
+
+p.product-name {
+  font-size: 4rem;
+  color: #ffffff;
+}
+
+p.product-price {
+  font-size: 3rem;
+  color: var(--secundario);
+}
+
+.banner {
+  min-height: 30rem;
+  grid-column: 1 / 3;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.banner-1 {
+  grid-row: 2 / 3;
+  background-image: url("../img/grafico1.jpg");
+}
+
+.banner-2 {
+  grid-row: 8 / 9;
+  background-image: url("../img/grafico2.jpg");
+}
+
+@media (min-width: 768px) {
+  .banner-2 {
+    grid-column: 2 / 4;
+    grid-row: 5 / 6;
+  }
+}
+
+.footer {
+  margin-top: 3rem;
+  padding: 2rem 0rem;
+  background-color: var(--primarioOscuro);
+}
+
+.copyright {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/**** INTERNAS ****/
+/**NOSOTROS**/
+@media (min-width: 768px) {
+  .main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+  }
+}
+
+.main-content img {
+  height: 100%;
+}
+
+/** PRODUCTO **/
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 3rem;
+  justify-content: center;
+}
+
+.product-container img {
+  width: 100%;
+}
+
+.product-container p {
+  margin-top: 0rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: repeat(2, 6rem);
+  gap: 1rem;
+}
+
+.input {
+  font-family: var(--fuentePrincipal);
+  font-size: 3rem;
+  background-color: transparent;
+  border: 5px solid #ffffff;
+  color: #ffffff;
+}
+
+.size {
+  grid-column: 1 / 2;
+}
+
+input[type="number"] {
+  width: 200px;
+}
+
+.cantidad {
+  grid-column: 2 / 3;
+}
+
+.btn {
+  grid-row: 2 / 3;
+  grid-column: 1 / 3;
+  font-family: var(--fuentePrincipal);
+  font-size: 2rem;
+  background-color: var(--secundario);
+  color: #000000;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #c79f00;
 }

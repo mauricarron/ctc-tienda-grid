@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Tienda Nerd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/style.css"
+    />
+    <script defer src="./js/app.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <img src="./img/logo.png" alt="Logotipo" />
+    </header>
+    <div class="navbar">
+      <nav class="nav">
+        <a href="./index.html">Tienda</a>
+        <a href="./nosotros.html">Nosotros</a>
+      </nav>
+    </div>
+    <main class="container">
+      <h1>React JS</h1>
+      <div class="product-container">
+        <div class="img-content">
+          <img src="./img/3.jpg" alt="producto remera" />
+        </div>
+        <div class="txt-content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatibus, saepe sed maxime unde laboriosam neque. Possimus
+            adipisci rerum obcaecati amet rem, est tempore deleniti a? Illum
+            accusantium dolore nulla eos!
+          </p>
+          <form class="form">
+            <select class="size input" name="product" id="product">
+              <option value="m">Mediana</option>
+              <option value="l">Grande</option>
+              <option value="xl">Extra Grande</option>
+            </select>
+            <input
+              type="number"
+              name="cantidad"
+              id="cantidad"
+              min="1"
+              class="input cantidad"
+            />
+            <input
+              type="submit"
+              class="btn submit"
+              value="Agregar al Carrito"
+            />
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <p class="copyright">
+        Front-End Store | Derechos Reservados 2020 &copy;
+      </p>
+    </footer>
+  </body>
+</html>
